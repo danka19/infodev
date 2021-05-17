@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Device list
+{% endblock %}
+
+{% block content %}
+
+    <div>
+        <table>
+            <tr>
+                <td>Название:</td>
+                <td>{{ device.name }}</td>
+            </tr>
+            <tr>
+                <td>Тип:</td>
+                <td>{{ device.category }}</td>
+            </tr>
+            <tr>
+                <td>Адрес:</td>
+                <td>{{ device.address }}</td>
+            </tr>
+            <tr>
+                <td>Ширина:</td>
+                <td>{{ device.latitude }}</td>
+            </tr>
+            <tr>
+                <td>Долгота:</td>
+                <td>{{ device.longitude }}</td>
+            </tr>
+            <tr>
+                <td>Радиус:</td>
+                <td>{{ device.radius }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <p></p>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Device list
+{% endblock %}
+
+{% block content %}
+
+    <div class="widget">
+        <h3 class="widget-title">Категории</h3>
+        <ul class="widget-list">
+            <li {% if not category %} class="selected" {% endif %}>
+                <a href="{% url "device_list" %}">Все</a>
+            </li>
+            {% for c in categories %}
+                <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <p></p>
+    {% for device in page_obj %}
+        {# Each "contact" is a Contact model object. #}
+        <div class="layer" id="layer1">
+            <a href="{{ device.get_absolute_url }}">{{ device.name }}</a>
+        </div><br>
+
+    {% endfor %}
+
+
+    <div class="item-list">
+        <ui class="pager">
+            {% if page_obj.has_previous %}
+                <li><a href="?page=1">&laquo; first</a></li>
+                <li><a href="?page={{ page_obj.previous_page_number }}">previous</a></li>
+            {% endif %}
+
+        <div class="pager-current">
+           <li></lo> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</li>
+        </div>
+
+        {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}">next</a></li>
+                <li><a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a></li>
+
+        {% endif %}
+        </ui>
+    </div>
+
+{% endblock %}

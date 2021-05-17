@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru">
+<meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+    <title>{% block title %}WEB APP{% endblock %}</title>
+</head>
+
+<body>
+<div class="menu">
+    <ul class="pager">
+        <li><a href="/">Home</a></li>
+        <li><a href="/device_list/">Device list</a></li>
+        <li>
+            <div>
+                <form action="{% url 'search_result' %}" method="get">
+                    <input name="q" type="text" placeholder="Search...">
+                    <button type="accept">Поиск</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+</html>

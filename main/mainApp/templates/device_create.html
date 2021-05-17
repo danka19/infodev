@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Device creation
+{% endblock %}
+
+{% block content %}
+
+    <form class="" action="{% url 'device_create' %}" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group">
+                {% if field.errors %}
+                    <div class="alert alert-danger">
+                        {{ field.errors }}
+                    </div>
+                {% endif %}
+                {{ field.label }}
+                <div class="form-field">
+                    {{ field }}
+                </div>
+
+            </div>
+        {% endfor %}
+        <button type="submit" name="button">Создать</button>
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,169 @@
+body {
+    padding: 10px;
+    font-size: 30px;
+}
+
+.item-list {
+    width: 100%;
+    height: 44px;
+    padding: 0 0 0 40px;
+    background: #F0F0F0;
+    border-bottom: 4px solid #CCCCCC;
+}
+
+.device-list {
+    width: 100%;
+    height: 44px;
+    padding: 0 0 0 40px;
+    text-align: center;
+}
+
+.menu {
+    width: 100%;
+    height: 44px;
+    padding: 0 0 0 40px;
+    background: #F0F0F0;
+    border-bottom: 4px solid #00CCBB;
+}
+
+.pager {
+    display: inline;
+    list-style: none;
+}
+
+li {
+    float: left;
+    margin-right: 20px;
+    padding: 4.6px 20px;
+}
+
+.pager-current {
+    background: #CCCCCC;
+    border-bottom: 4px solid #000000;
+}
+
+li a {
+    text-decoration: none;
+    color: #00CCBB;
+}
+
+.layer {
+    align-content: center;
+    list-style: none;
+    padding: .1em .1em .1em .1em;
+}
+
+.layer a {
+    position: relative;
+    display: block;
+    padding: .2em .2em .2em .4em;
+    margin: .2em 0 .2em 1em;
+    color: black;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+.layer a:hover {
+    background: #00CCBB;
+}
+
+.layer a:before {
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #9097A2;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.layer a:after {
+    position: absolute;
+    content: "";
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+}
+
+.layer a:hover:after {
+    left: -.5em;
+    border-left-color: #9097A2;
+}
+
+#layer1 {
+    background: #769CE9; /* Цвет фона */
+	width: 100%; /* Ширина первого слоя */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+#layer2 {
+    background: #FE3F49; /* Цвет фона */
+	width: 100%; /* Ширина первого слоя */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+
+table
+{
+    border-collapse: separate;
+    border-spacing: 10px 0px;
+}
+td, th
+{
+    padding: 10px;
+    border: 1px solid #000;
+    border-top: none;
+}
+table tr:first-child th
+{
+    border-top: 1px solid #000;
+}
+
+
+.widget {
+  padding: 20px 30px;
+  background: white;
+  font-family: 'Roboto', sans-serif;
+}
+.widget-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #222;
+  font-size: 16px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  border-left: 2px solid #00CCBB;
+}
+.widget-list {
+  padding: 0;
+  list-style: none;
+}
+.widget-list a:before {
+  content: "\2014";
+  margin-right: 14px;
+}
+.widget-list a {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #444;
+  transition: .3s linear;
+}
+.widget-list a:hover {
+    color: #00CCBB;
+}
+
+ .form-field{
+
+            height:25px;
+            width:200px;
+            margin: 10px 10px 10px 0;
+        }

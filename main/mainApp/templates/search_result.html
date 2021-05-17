@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Device list
+{% endblock %}
+
+{% block content %}
+
+<p></p>
+
+    {% for device in items %}
+        <div class="layer" id="layer1">
+            <a href="{% url 'device_item' device.slug %}">{{ device.name }}</a>
+        </div>
+
+        <div class="layer" id="layer2">
+            {{ device.address }}
+        </div>
+        <p></p>
+    {% endfor %}
+    </div>
+{% endblock %}
+
