@@ -7,6 +7,29 @@
 
 {% block content %}
 
+    <div class="">
+    <h3 class="widget-title">Фильтры</h3>
+        <form action="{% url "device_list" %}" method="get">
+            <div>
+                <p>По координатам: в квадрате, заданного левой верхней и правой нижней точкой</p>
+                <input class="form-field" name="s1x" type="text" placeholder="x">
+                <input class="form-field" name="s1y" type="text" placeholder="y">
+                <input class="form-field" name="s2x" type="text" placeholder="x">
+                <input class="form-field" name="s2y" type="text" placeholder="y">
+            </div>
+
+            <p>По радиусу покрытия - в диапазоне</p>
+            <input class="form-field" name="r1" type="text">
+            <input class="form-field" name="r2" type="text">
+            <p></p>
+             <button type="accept">Применить</button>
+        </form>
+
+
+    </div>
+
+
+
     <div class="widget">
         <h3 class="widget-title">Категории</h3>
         <ul class="widget-list">
